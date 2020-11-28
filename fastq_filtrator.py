@@ -35,6 +35,7 @@ def parse_arguments() -> dict:
             except ValueError:
                 print("Invalid value for --gc_bounds. Must be integers from 0 to 100.")
                 sys.exit(1)
+            # Only if --gc_bounds is last argument in command and only 1 boundary specified.
             except IndexError:
                 pass
             break
