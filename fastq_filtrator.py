@@ -9,7 +9,7 @@ def parse_arguments() -> dict:
     for idx, arg in enumerate(args):
         if arg == "--min_length":
             try:
-                arguments[arg.lstrip("-")] = int(args[idx+1])
+                arguments[arg.lstrip("-")] = int(args[idx + 1])
             except ValueError:
                 print("Invalid value for --min_length. Must be integer.")
                 sys.exit(1)
@@ -29,9 +29,9 @@ def parse_arguments() -> dict:
         if arg == "--gc_bounds":
             arguments["gc_bounds"] = [0, 100]
             try:
-                arguments["gc_bounds"][0] = int(args[idx+1])
+                arguments["gc_bounds"][0] = int(args[idx + 1])
                 if args[idx+2].isdigit():
-                    arguments["gc_bounds"][1] = int(args[idx+2])
+                    arguments["gc_bounds"][1] = int(args[idx + 2])
             except ValueError:
                 print("Invalid value for --gc_bounds. Must be integers from 0 to 100.")
                 sys.exit(1)
@@ -52,7 +52,7 @@ def parse_arguments() -> dict:
 
     for idx, arg in enumerate(args):
         if arg == "--output_base_name":
-            arguments["output_base_name"] = args[idx+1]
+            arguments["output_base_name"] = args[idx + 1]
             break
     else:
         arguments["output_base_name"] = arguments["file_name"].split(".")[0]
