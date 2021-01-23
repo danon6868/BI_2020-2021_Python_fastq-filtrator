@@ -1,1 +1,1 @@
-# BI_2020-2021_Python_fastq-filtrator
+# Filter fastq files based on length and GC content
